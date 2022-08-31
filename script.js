@@ -5,10 +5,15 @@ async function getWeatherByCityName(){
     let cityName = $('#city').val();
     let response = await fetch(`${apiUrl}?q=${cityName}&appid=${apiKey}&units=metric`);
     let data = await response.json();
-    //let dataCount = data.list;
-    let dataCount = 
+    let dataCount = data.list;
+    let weekDate = [];
 
     //console.log(dataCount);
+
+    for (let i = 1; i < 7; i++) { 
+        let followingDay = new Date(Date.now() + (86400000 *i));
+        weekDate.push(followingDay.toISOString().slice(0,10));
+    }
 
     dataCount.forEach(item => {
         $('.cards').append($('<div>',{'class': 'card'}))
