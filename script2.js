@@ -1440,3 +1440,4 @@ let dataCount = [
         "dt_txt": "2022-09-05 18:00:00"
     }
 ]
+localStorage.setItem("dataCount", dataCount);
