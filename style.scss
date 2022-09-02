@@ -1,0 +1,21 @@
+body{
+    background-color: gainsboro;
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+}
+
+#area{
+    border: 2px double darkgrey;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.cards{
+    vertical-align: middle;
+    display: inline;
+}
+
+.card{
+    border: 1px double darkgrey;
+}
